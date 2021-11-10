@@ -1,0 +1,36 @@
+i=5
+divicion=10.50/2.12
+suma=10123.1235+2.123124
+resta=123-102
+multiplicacion=15*12
+cont=12
+contador = 1
+numero = int(input(u"Ingrese un numero"))
+while numero>20 or numero<0:
+ numero = int(input(u"Ingrese un numero"))
+ contador += 1
+print u"Numero ingresado:",numero
+print u"Numero de intentos:",contador
+suma = 0
+numero = int(input(u"Ingrese un numero"))
+while numero>0:
+ suma = (numero*(numero+1))/2
+ break
+print u"Numero ingresado:",numero
+print u"Suma total:",suma
+saldo = 0
+print ("Escriba la bitacora de operaciones: ")
+while True:
+    s = input()
+    if not s:
+        break
+    datos = s.split(" ")
+    operacion = datos[0]
+    monto = int(datos[1])
+    if operacion=="D":
+        saldo+=monto
+    elif operacion=="R":
+        saldo-=monto
+    else:
+        pass
+print (saldo)
